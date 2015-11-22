@@ -1,13 +1,845 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Videos View Controller-->
+        <scene sceneID="hl5-Sh-auH">
+            <objects>
+                <viewController id="ckq-Ye-NuL" customClass="VideosViewController" customModule="Vankon_World" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ul9-l7-q6b"/>
+                        <viewControllerLayoutGuide type="bottom" id="ixt-XL-uf5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eYZ-SC-sAi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txZ-nO-ltQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="MS8-T3-Zri"/>
+                                    <constraint firstAttribute="height" constant="70" id="WXO-D8-LRo"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.87450980389999999" green="0.38823529410000002" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Videos" id="ytY-g6-UcA"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIL-hx-8ry" customClass="DesignableButton" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="520" y="520" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="1q8-ay-kkV"/>
+                                    <constraint firstAttribute="width" constant="60" id="GWf-Yp-1yJ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="ruv-h6-bU7"/>
+                                    <constraint firstAttribute="height" constant="60" id="w22-vI-37u"/>
+                                </constraints>
+                                <state key="normal" image="backcircularbutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeUp"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="7CD-z7-elv" kind="unwind" unwindAction="unwindToViewController:" id="IzR-eo-rRJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f85-RT-HZn" customClass="DesignableButton" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="176" y="226.5" width="248" height="147"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="f85-RT-HZn" secondAttribute="height" multiplier="248:147" id="kNZ-bU-fkj"/>
+                                    <constraint firstAttribute="width" constant="350" id="odO-ZW-UAm"/>
+                                </constraints>
+                                <state key="normal" image="aboutusvideo">
+                                    <color key="titleColor" red="0.87450980389999999" green="0.38823529410000002" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kNZ-bU-fkj"/>
+                                        <exclude reference="odO-ZW-UAm"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="kNZ-bU-fkj"/>
+                                        <include reference="odO-ZW-UAm"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="seeVideos:" destination="ckq-Ye-NuL" eventType="touchUpInside" id="ICL-Yx-pxT"/>
+                                    <action selector="showOffers:" destination="2uP-hp-kur" eventType="touchUpInside" id="gCc-Py-RW3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="txZ-nO-ltQ" secondAttribute="trailing" id="4K3-3Z-KII"/>
+                            <constraint firstAttribute="trailing" secondItem="cIL-hx-8ry" secondAttribute="trailing" constant="20" id="9Y5-14-8rm"/>
+                            <constraint firstItem="txZ-nO-ltQ" firstAttribute="leading" secondItem="eYZ-SC-sAi" secondAttribute="leading" id="L5J-33-mBb"/>
+                            <constraint firstAttribute="centerX" secondItem="f85-RT-HZn" secondAttribute="centerX" id="S9O-gK-xxW"/>
+                            <constraint firstItem="txZ-nO-ltQ" firstAttribute="top" secondItem="eYZ-SC-sAi" secondAttribute="top" id="ZDR-cR-ncB"/>
+                            <constraint firstAttribute="centerY" secondItem="f85-RT-HZn" secondAttribute="centerY" id="nMG-pT-yR1"/>
+                            <constraint firstItem="ixt-XL-uf5" firstAttribute="top" secondItem="cIL-hx-8ry" secondAttribute="bottom" constant="20" id="sBp-24-L74"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="pSI-UU-zF8" kind="presentation" identifier="seeVideosWeb" modalTransitionStyle="flipHorizontal" id="2co-3E-iet"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A1A-Ka-usw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="7CD-z7-elv" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="342" y="-857.25"/>
+        </scene>
         <!--View Controller-->
+        <scene sceneID="md0-68-qai">
+            <objects>
+                <viewController id="jVJ-FG-OL0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J5i-PQ-UDI"/>
+                        <viewControllerLayoutGuide type="bottom" id="kpG-Nd-EcH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kfF-Id-Di0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tiT-IA-u6Z">
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="25" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MuJ-Js-feG">
+                                        <rect key="frame" x="20" y="40" width="560" height="449"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="412" id="4bC-18-OSY"/>
+                                        </constraints>
+                                        <string key="text">VANKON , as a brand has grown in both multitude and magnitude. VANKON commenced its formal operations with a relatively limited product range and a small family business in Jaipur, Rajasthan.
+
+Today VANKON has spread its markets to almost 11 states including Gujrat, Delhi, Kerala, Jammu and Kashmir, Uttar Pradesh, Jharkhand, Bihar , to name  few. We have also appended our product ranges according to the changing scenario and Market conditions. VANKON has now taken a step ahead to introduce power and energy consuming range of products like LED (light emitting diode) Lights and various new innovations. 
+
+We believe in serving you the best. Living up to its   customer’s demands and expectations VANKON has worked its way up from a market competitor to a market Leader.  
+</string>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="4bC-18-OSY"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="MuJ-Js-feG" secondAttribute="centerY" constant="0.5" id="095-ca-V6T">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="MuJ-Js-feG" secondAttribute="trailing" constant="125" id="0d9-dM-7CB"/>
+                                    <constraint firstAttribute="trailing" secondItem="MuJ-Js-feG" secondAttribute="trailing" constant="20" id="3SU-3K-Lxo"/>
+                                    <constraint firstItem="MuJ-Js-feG" firstAttribute="top" secondItem="tiT-IA-u6Z" secondAttribute="topMargin" id="73E-4m-M7R"/>
+                                    <constraint firstItem="MuJ-Js-feG" firstAttribute="centerX" secondItem="tiT-IA-u6Z" secondAttribute="centerX" id="9kw-aA-dHP"/>
+                                    <constraint firstItem="MuJ-Js-feG" firstAttribute="bottom" secondItem="tiT-IA-u6Z" secondAttribute="bottomMargin" id="AEg-YQ-iNh"/>
+                                    <constraint firstAttribute="centerX" secondItem="MuJ-Js-feG" secondAttribute="centerX" id="Jcl-G4-6jv"/>
+                                    <constraint firstItem="MuJ-Js-feG" firstAttribute="centerY" secondItem="tiT-IA-u6Z" secondAttribute="centerY" id="SVl-LL-6Aa"/>
+                                    <constraint firstItem="MuJ-Js-feG" firstAttribute="top" secondItem="tiT-IA-u6Z" secondAttribute="top" constant="40" id="Ut8-SK-hir"/>
+                                    <constraint firstAttribute="bottom" secondItem="MuJ-Js-feG" secondAttribute="bottom" constant="40" id="bd1-7f-Y90"/>
+                                    <constraint firstItem="MuJ-Js-feG" firstAttribute="leading" secondItem="tiT-IA-u6Z" secondAttribute="leading" constant="20" id="jVc-ss-uyr">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0d9-dM-7CB"/>
+                                        <exclude reference="73E-4m-M7R"/>
+                                        <exclude reference="9kw-aA-dHP"/>
+                                        <exclude reference="AEg-YQ-iNh"/>
+                                        <exclude reference="SVl-LL-6Aa"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="jVc-ss-uyr"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="jVc-ss-uyr"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0T9-QB-TvD" customClass="DesignableButton" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="520" y="520" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="g9A-Rt-MxW"/>
+                                    <constraint firstAttribute="height" constant="60" id="tit-4l-lsz"/>
+                                </constraints>
+                                <state key="normal" image="backcircularbutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeUp"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="2AX-YQ-WLD" kind="unwind" unwindAction="unwindToViewController:" id="sNY-l3-IF5"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uch-UU-k8u">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="DPA-Wt-dXz"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.87450980389999999" green="0.38823529410000002" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="About Us" id="12b-ow-Adr"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uch-UU-k8u" firstAttribute="leading" secondItem="kfF-Id-Di0" secondAttribute="leading" id="DQV-Fz-lY9"/>
+                            <constraint firstItem="uch-UU-k8u" firstAttribute="leading" secondItem="tiT-IA-u6Z" secondAttribute="leading" id="JGJ-Pg-CiC"/>
+                            <constraint firstItem="uch-UU-k8u" firstAttribute="top" secondItem="kfF-Id-Di0" secondAttribute="top" id="RYv-Pa-bhI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0T9-QB-TvD" secondAttribute="trailing" constant="4" id="Sgr-P1-z7u"/>
+                            <constraint firstAttribute="bottom" secondItem="0T9-QB-TvD" secondAttribute="bottom" constant="20" symbolic="YES" id="Skp-3J-dYP"/>
+                            <constraint firstItem="tiT-IA-u6Z" firstAttribute="trailing" secondItem="uch-UU-k8u" secondAttribute="trailing" id="goD-bL-XO8"/>
+                            <constraint firstAttribute="trailing" secondItem="uch-UU-k8u" secondAttribute="trailing" id="jnX-LM-blJ"/>
+                            <constraint firstItem="tiT-IA-u6Z" firstAttribute="bottom" secondItem="kpG-Nd-EcH" secondAttribute="top" id="rOf-7K-UYv"/>
+                            <constraint firstItem="uch-UU-k8u" firstAttribute="top" secondItem="J5i-PQ-UDI" secondAttribute="bottom" id="tRs-0y-sed"/>
+                            <constraint firstItem="tiT-IA-u6Z" firstAttribute="top" secondItem="uch-UU-k8u" secondAttribute="bottom" id="z5I-5j-oYV"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="tRs-0y-sed"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHd-C9-fCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2AX-YQ-WLD" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1070.25" y="-857.25"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zGs-7u-Jup">
+            <objects>
+                <viewController id="U8x-fX-RYf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bki-aN-Z5R"/>
+                        <viewControllerLayoutGuide type="bottom" id="8jE-MS-VXw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rzo-J0-UVD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQd-As-OWh" customClass="DesignableButton" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="520" y="520" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="2W4-4L-GXj"/>
+                                    <constraint firstAttribute="width" constant="60" id="8W6-n9-DbD"/>
+                                    <constraint firstAttribute="height" constant="60" id="DVf-tj-R2G"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="tWK-rW-vva"/>
+                                </constraints>
+                                <state key="normal" image="backcircularbutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeUp"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="CUc-py-vER" kind="unwind" unwindAction="unwindToViewController:" id="Lxw-tA-oAo"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKK-ld-0M2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="c00-I6-llN"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.87450980389999999" green="0.38823529410000002" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Credits" id="KB2-Vi-mjj"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rohit Gurnani" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i6H-sG-FzY" customClass="DesignableLabel" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="174.5" y="264.5" width="251" height="55"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                <color key="textColor" red="0.87450980389999999" green="0.38823529410000002" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email ID : modiyash3393@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cm2-hA-EMU" customClass="DesignableLabel" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="36" y="180" width="528" height="34.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" red="0.87450980389999999" green="0.38823529410000002" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email ID : rkgi10@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kIB-Bx-axT" customClass="DesignableLabel" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="36.5" y="329.5" width="527.5" height="34.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" red="0.87450980389999999" green="0.38823529410000002" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Made with ❤︎ in India" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ttk-4o-J2k" customClass="DesignableLabel" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="36" y="465" width="530" height="55"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                <color key="textColor" red="0.87450980389999999" green="0.38823529410000002" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yash Modi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHa-x6-WAD" customClass="DesignableLabel" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="207" y="120" width="188.5" height="55"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                <color key="textColor" red="0.87450980389999999" green="0.38823529410000002" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="i6H-sG-FzY" secondAttribute="centerX" id="0Zt-wu-mb6">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="cm2-hA-EMU" firstAttribute="top" secondItem="EHa-x6-WAD" secondAttribute="bottom" constant="5" id="1IC-6b-hhX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ttk-4o-J2k" secondAttribute="trailing" constant="18" id="2V5-76-qjM"/>
+                            <constraint firstItem="8jE-MS-VXw" firstAttribute="top" secondItem="ttk-4o-J2k" secondAttribute="bottom" constant="80" id="AL8-9S-xOM"/>
+                            <constraint firstAttribute="centerX" secondItem="i6H-sG-FzY" secondAttribute="centerX" constant="-100.5" id="EcH-zL-Rqt">
+                                <variation key="heightClass=regular-widthClass=regular" constant="-100"/>
+                            </constraint>
+                            <constraint firstItem="cm2-hA-EMU" firstAttribute="leading" secondItem="Rzo-J0-UVD" secondAttribute="leadingMargin" constant="20" id="FsN-FV-dVV"/>
+                            <constraint firstItem="EHa-x6-WAD" firstAttribute="top" secondItem="bKK-ld-0M2" secondAttribute="bottom" constant="50" id="J9y-12-uF9">
+                                <variation key="widthClass=compact" constant="25"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="kIB-Bx-axT" secondAttribute="trailing" constant="20" id="KEH-6N-VKs"/>
+                            <constraint firstItem="cm2-hA-EMU" firstAttribute="leading" secondItem="Rzo-J0-UVD" secondAttribute="leadingMargin" constant="20.5" id="Mkw-ii-aWy"/>
+                            <constraint firstItem="i6H-sG-FzY" firstAttribute="centerX" secondItem="cm2-hA-EMU" secondAttribute="centerX" constant="0.5" id="NWT-CY-Ds5"/>
+                            <constraint firstItem="i6H-sG-FzY" firstAttribute="top" secondItem="cm2-hA-EMU" secondAttribute="bottom" constant="50" id="NvR-hy-Bjr">
+                                <variation key="widthClass=compact" constant="30"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="75"/>
+                            </constraint>
+                            <constraint firstItem="kIB-Bx-axT" firstAttribute="centerX" secondItem="ttk-4o-J2k" secondAttribute="centerX" id="O7l-1q-Iu2"/>
+                            <constraint firstAttribute="trailing" secondItem="AQd-As-OWh" secondAttribute="trailing" constant="20" id="OUo-QN-cEp"/>
+                            <constraint firstAttribute="centerX" secondItem="EHa-x6-WAD" secondAttribute="centerX" constant="-1.25" id="Oss-id-WIP">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="ttk-4o-J2k" firstAttribute="leading" secondItem="Rzo-J0-UVD" secondAttribute="leadingMargin" constant="20" id="Qu6-Pf-ngt"/>
+                            <constraint firstItem="kIB-Bx-axT" firstAttribute="centerX" secondItem="i6H-sG-FzY" secondAttribute="centerX" id="Sov-Sm-Qru"/>
+                            <constraint firstItem="bKK-ld-0M2" firstAttribute="leading" secondItem="Rzo-J0-UVD" secondAttribute="leading" id="V8d-Lg-Ez1"/>
+                            <constraint firstItem="8jE-MS-VXw" firstAttribute="top" secondItem="AQd-As-OWh" secondAttribute="bottom" constant="20" id="ZZw-jU-5fH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cm2-hA-EMU" secondAttribute="trailing" constant="20" id="Zah-Zq-YkA"/>
+                            <constraint firstItem="kIB-Bx-axT" firstAttribute="leading" secondItem="Rzo-J0-UVD" secondAttribute="leadingMargin" constant="20.5" id="dqb-tm-GOh"/>
+                            <constraint firstItem="kIB-Bx-axT" firstAttribute="leading" secondItem="Rzo-J0-UVD" secondAttribute="leadingMargin" constant="20.5" id="dz9-Ox-rac"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cm2-hA-EMU" secondAttribute="trailing" constant="20" id="e0Z-5f-GWW"/>
+                            <constraint firstAttribute="centerX" secondItem="EHa-x6-WAD" secondAttribute="centerX" id="hdD-Ox-6V3"/>
+                            <constraint firstItem="ttk-4o-J2k" firstAttribute="leading" secondItem="Rzo-J0-UVD" secondAttribute="leadingMargin" constant="20" id="isK-pb-f86"/>
+                            <constraint firstItem="cm2-hA-EMU" firstAttribute="centerX" secondItem="EHa-x6-WAD" secondAttribute="centerX" id="j4T-Nk-3Ey"/>
+                            <constraint firstItem="kIB-Bx-axT" firstAttribute="top" secondItem="i6H-sG-FzY" secondAttribute="bottom" constant="10" id="nnV-uA-6W8"/>
+                            <constraint firstItem="8jE-MS-VXw" firstAttribute="top" secondItem="ttk-4o-J2k" secondAttribute="bottom" constant="80" id="vpN-bz-y7g">
+                                <variation key="widthClass=compact" constant="65"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="130"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="bKK-ld-0M2" secondAttribute="trailing" id="w0y-Uv-yyz"/>
+                            <constraint firstItem="bKK-ld-0M2" firstAttribute="top" secondItem="Rzo-J0-UVD" secondAttribute="top" id="wqV-63-8oO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kIB-Bx-axT" secondAttribute="trailing" constant="20" id="ygg-CN-dCC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Mkw-ii-aWy"/>
+                                <exclude reference="Zah-Zq-YkA"/>
+                                <exclude reference="j4T-Nk-3Ey"/>
+                                <exclude reference="hdD-Ox-6V3"/>
+                                <exclude reference="EcH-zL-Rqt"/>
+                                <exclude reference="NWT-CY-Ds5"/>
+                                <exclude reference="KEH-6N-VKs"/>
+                                <exclude reference="O7l-1q-Iu2"/>
+                                <exclude reference="Sov-Sm-Qru"/>
+                                <exclude reference="dz9-Ox-rac"/>
+                                <exclude reference="isK-pb-f86"/>
+                                <exclude reference="AL8-9S-xOM"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Oss-id-WIP"/>
+                                <include reference="0Zt-wu-mb6"/>
+                                <exclude reference="EcH-zL-Rqt"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="EcH-zL-Rqt"/>
+                                <exclude reference="NWT-CY-Ds5"/>
+                                <exclude reference="O7l-1q-Iu2"/>
+                                <exclude reference="Sov-Sm-Qru"/>
+                                <include reference="vpN-bz-y7g"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZXW-XI-9Ph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="CUc-py-vER" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1757.25" y="-857.25"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AWJ-Q5-djU">
+            <objects>
+                <viewController id="ebD-a6-i9z" customClass="PDFViewController" customModule="Vankon_World" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EdO-Uy-Rm2"/>
+                        <viewControllerLayoutGuide type="bottom" id="xDU-Vz-dOR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eNm-jO-lUL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mCL-Yp-mHK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kg-J0-0Jb" customClass="DesignableButton" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="21" y="536" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="4C1-yr-98q"/>
+                                    <constraint firstAttribute="height" constant="44" id="E2P-kX-qes"/>
+                                </constraints>
+                                <state key="normal" image="crossbutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToHome:" destination="ebD-a6-i9z" eventType="touchUpInside" id="nwp-t9-pcj"/>
+                                    <segue destination="dOG-wA-Hw2" kind="unwind" unwindAction="unwindToViewController:" id="JNg-nY-YVt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0S-MA-p1s" customClass="DesignableButton" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="75" y="536" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="dUo-1g-lLu"/>
+                                    <constraint firstAttribute="height" constant="44" id="h9k-47-ZyK"/>
+                                </constraints>
+                                <state key="normal" image="sharebutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareApp:" destination="ebD-a6-i9z" eventType="touchUpInside" id="lOu-Pl-ATc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7Kg-J0-0Jb" firstAttribute="height" secondItem="l0S-MA-p1s" secondAttribute="height" id="0KL-N3-BCu"/>
+                            <constraint firstItem="l0S-MA-p1s" firstAttribute="leading" secondItem="7Kg-J0-0Jb" secondAttribute="trailing" constant="10" id="ESA-Gj-GG6"/>
+                            <constraint firstItem="7Kg-J0-0Jb" firstAttribute="width" secondItem="l0S-MA-p1s" secondAttribute="width" id="Ysr-Pg-YPC"/>
+                            <constraint firstAttribute="trailing" secondItem="mCL-Yp-mHK" secondAttribute="trailing" id="ckJ-md-upg"/>
+                            <constraint firstItem="xDU-Vz-dOR" firstAttribute="top" secondItem="7Kg-J0-0Jb" secondAttribute="bottom" constant="20" id="lwr-oS-JVN"/>
+                            <constraint firstItem="7Kg-J0-0Jb" firstAttribute="leading" secondItem="eNm-jO-lUL" secondAttribute="leadingMargin" constant="5" id="mPB-MM-Xv2"/>
+                            <constraint firstItem="mCL-Yp-mHK" firstAttribute="leading" secondItem="eNm-jO-lUL" secondAttribute="leading" id="pDE-JW-uuv"/>
+                            <constraint firstItem="mCL-Yp-mHK" firstAttribute="top" secondItem="eNm-jO-lUL" secondAttribute="top" id="wVz-7C-qVL"/>
+                            <constraint firstItem="xDU-Vz-dOR" firstAttribute="top" secondItem="mCL-Yp-mHK" secondAttribute="bottom" id="yhM-LM-QaV"/>
+                            <constraint firstItem="7Kg-J0-0Jb" firstAttribute="centerY" secondItem="l0S-MA-p1s" secondAttribute="centerY" id="yt2-OD-bDV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="shareBtn" destination="l0S-MA-p1s" id="8fn-fh-dwP"/>
+                        <outlet property="webView" destination="mCL-Yp-mHK" id="6Kn-TP-MQg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fhD-Rr-MMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dOG-wA-Hw2" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-389" y="-1577"/>
+        </scene>
+        <!--Social View Controller-->
+        <scene sceneID="ogS-Xu-cHn">
+            <objects>
+                <viewController id="ch3-GQ-pky" customClass="SocialViewController" customModule="Vankon_World" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e4M-yM-iIM"/>
+                        <viewControllerLayoutGuide type="bottom" id="vFB-OC-Mn3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1sU-7G-BhR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JlO-Gt-jyb" customClass="DesignableButton" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="520" y="520" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="EAE-Fs-I0l"/>
+                                    <constraint firstAttribute="height" constant="60" id="dko-O8-FI7"/>
+                                    <constraint firstAttribute="width" constant="60" id="rc2-N1-FVh"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="tf4-VA-JeK"/>
+                                </constraints>
+                                <state key="normal" image="backcircularbutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeUp"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="ilZ-0S-OOk" kind="unwind" unwindAction="unwindToViewController:" id="vy1-Ri-AxI"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCc-Y6-6p5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="u1H-wp-CPA"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.87450980389999999" green="0.38823529410000002" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Social Media" id="bJC-kr-UWJ"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHT-fn-N3Y">
+                                <rect key="frame" x="228" y="228" width="144" height="144"/>
+                                <state key="normal" image="facebookroundbutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openSocial:" destination="ch3-GQ-pky" eventType="touchUpInside" id="gTj-nc-j2v"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Like Us and follow Us on Facebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N81-g3-ryi">
+                                <rect key="frame" x="98" y="402" width="380" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.87450980389999999" green="0.38823529410000002" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vFB-OC-Mn3" firstAttribute="top" secondItem="JlO-Gt-jyb" secondAttribute="bottom" constant="20" id="1xo-dC-uUb"/>
+                            <constraint firstAttribute="trailing" secondItem="GCc-Y6-6p5" secondAttribute="trailing" id="6dH-Qs-MZw"/>
+                            <constraint firstAttribute="centerX" secondItem="MHT-fn-N3Y" secondAttribute="centerX" id="9u3-mQ-uo9"/>
+                            <constraint firstAttribute="centerX" secondItem="N81-g3-ryi" secondAttribute="centerX" constant="12" id="NZQ-6M-cM8"/>
+                            <constraint firstAttribute="trailing" secondItem="JlO-Gt-jyb" secondAttribute="trailing" constant="20" id="T2P-OH-Pl6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N81-g3-ryi" secondAttribute="trailing" constant="44" id="VXj-CA-jum"/>
+                            <constraint firstAttribute="centerX" secondItem="N81-g3-ryi" secondAttribute="centerX" constant="12" id="Vzd-6b-CHh"/>
+                            <constraint firstItem="GCc-Y6-6p5" firstAttribute="leading" secondItem="1sU-7G-BhR" secondAttribute="leading" id="b10-ef-SP4"/>
+                            <constraint firstItem="GCc-Y6-6p5" firstAttribute="top" secondItem="1sU-7G-BhR" secondAttribute="top" id="i3E-qT-Owu"/>
+                            <constraint firstItem="N81-g3-ryi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1sU-7G-BhR" secondAttribute="leadingMargin" constant="20" id="o0Z-WQ-rjr"/>
+                            <constraint firstItem="N81-g3-ryi" firstAttribute="centerX" secondItem="MHT-fn-N3Y" secondAttribute="centerX" constant="-12" id="pX3-3G-qEy"/>
+                            <constraint firstItem="N81-g3-ryi" firstAttribute="top" secondItem="MHT-fn-N3Y" secondAttribute="bottom" constant="30" id="qf8-uo-Z39"/>
+                            <constraint firstAttribute="centerY" secondItem="MHT-fn-N3Y" secondAttribute="centerY" id="vO8-50-aRZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VXj-CA-jum"/>
+                                <exclude reference="Vzd-6b-CHh"/>
+                                <exclude reference="pX3-3G-qEy"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W3D-oN-81w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ilZ-0S-OOk" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1757.25" y="-167.25"/>
+        </scene>
+        <!--Offers View Controller-->
+        <scene sceneID="MoQ-7U-D5g">
+            <objects>
+                <viewController id="2uP-hp-kur" customClass="OffersViewController" customModule="Vankon_World" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bup-nj-omx"/>
+                        <viewControllerLayoutGuide type="bottom" id="9G8-R1-wFp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Ag-gX-12U">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHy-4B-IZh">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="9gb-Dp-MFT"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.87450980389999999" green="0.38823529410000002" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Latest Offers" id="pZB-9X-TE2"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMA-De-CVN">
+                                <rect key="frame" x="208" y="270" width="184" height="60"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                <state key="normal" title="Check Now">
+                                    <color key="titleColor" red="0.87450980389999999" green="0.38823529410000002" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showOffers:" destination="2uP-hp-kur" eventType="touchUpInside" id="p8Y-Og-Ug4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check for Latest Offers and Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWR-vy-PFP">
+                                <rect key="frame" x="128" y="350" width="344" height="30.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2g-fY-5dl" customClass="DesignableButton" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="504" y="520" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="BQX-rk-esT"/>
+                                    <constraint firstAttribute="height" constant="60" id="WeX-0B-0kU"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="gfa-rj-1g1"/>
+                                    <constraint firstAttribute="width" constant="60" id="mEe-ko-gcQ"/>
+                                </constraints>
+                                <state key="normal" image="backcircularbutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeUp"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="dPl-U2-3F9" kind="unwind" unwindAction="unwindToViewController:" id="HSr-Dw-8HZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dHy-4B-IZh" secondAttribute="trailing" id="Er5-42-9M4"/>
+                            <constraint firstItem="dHy-4B-IZh" firstAttribute="leading" secondItem="3Ag-gX-12U" secondAttribute="leading" id="HiP-2f-LKS"/>
+                            <constraint firstItem="9G8-R1-wFp" firstAttribute="top" secondItem="r2g-fY-5dl" secondAttribute="bottom" constant="20" id="P8z-i2-Egf"/>
+                            <constraint firstAttribute="centerX" secondItem="bWR-vy-PFP" secondAttribute="centerX" constant="-0.5" id="Vpk-Wo-Rsd"/>
+                            <constraint firstItem="SMA-De-CVN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3Ag-gX-12U" secondAttribute="leadingMargin" constant="20" id="YpP-r8-uOC"/>
+                            <constraint firstItem="bWR-vy-PFP" firstAttribute="top" secondItem="SMA-De-CVN" secondAttribute="bottom" constant="20" id="heh-1x-Tr8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r2g-fY-5dl" secondAttribute="trailing" constant="20" id="ixK-dr-jLW"/>
+                            <constraint firstItem="bWR-vy-PFP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3Ag-gX-12U" secondAttribute="leadingMargin" constant="20" id="sgo-so-7Qh"/>
+                            <constraint firstItem="dHy-4B-IZh" firstAttribute="top" secondItem="3Ag-gX-12U" secondAttribute="top" id="uQe-oP-gaR"/>
+                            <constraint firstAttribute="centerY" secondItem="SMA-De-CVN" secondAttribute="centerY" id="wmq-ej-DZO"/>
+                            <constraint firstAttribute="centerX" secondItem="SMA-De-CVN" secondAttribute="centerX" id="ycb-uC-VvV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="pSI-UU-zF8" kind="presentation" identifier="showLatestOffersWeb" modalTransitionStyle="flipHorizontal" id="fGd-0m-1eK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nLe-5L-TCE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="dPl-U2-3F9" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1757.25" y="705"/>
+        </scene>
+        <!--Nav Menu Table View Controller-->
+        <scene sceneID="wAb-gV-MI4">
+            <objects>
+                <tableViewController id="RYU-Of-esl" customClass="NavMenuTableViewController" customModule="Vankon_World" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="72" sectionHeaderHeight="22" sectionFooterHeight="22" id="2br-j7-jAd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ClearCell" rowHeight="72" id="Ikq-Wv-7ei">
+                                <rect key="frame" x="0.0" y="22" width="600" height="72"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ikq-Wv-7ei" id="6fr-HZ-VSo">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="72"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44R-Tn-gOY">
+                                            <rect key="frame" x="0.0" y="15.5" width="600" height="41"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="35"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="44R-Tn-gOY" firstAttribute="leading" secondItem="6fr-HZ-VSo" secondAttribute="leading" id="8Gx-yB-Dej"/>
+                                        <constraint firstAttribute="centerY" secondItem="44R-Tn-gOY" secondAttribute="centerY" id="ELJ-VC-u5W"/>
+                                        <constraint firstAttribute="centerX" secondItem="44R-Tn-gOY" secondAttribute="centerX" id="Q4j-tQ-66h"/>
+                                        <constraint firstAttribute="centerY" secondItem="44R-Tn-gOY" secondAttribute="centerY" id="W9O-C6-R7x"/>
+                                        <constraint firstAttribute="centerX" secondItem="44R-Tn-gOY" secondAttribute="centerX" id="kXn-uc-CLm"/>
+                                        <constraint firstAttribute="trailing" secondItem="44R-Tn-gOY" secondAttribute="trailing" id="yBY-R8-nBT"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="W9O-C6-R7x"/>
+                                            <exclude reference="kXn-uc-CLm"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RYU-Of-esl" id="7E2-bg-huc"/>
+                            <outlet property="delegate" destination="RYU-Of-esl" id="a7c-Z3-oKO"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="2uP-hp-kur" kind="show" identifier="showLatestOffers" id="IBf-3g-8c9"/>
+                        <segue destination="ch3-GQ-pky" kind="show" identifier="showSocialMedia" id="rhL-jQ-yaV"/>
+                        <segue destination="U8x-fX-RYf" kind="show" identifier="showCredits" id="W3e-kl-xHb"/>
+                        <segue destination="jVJ-FG-OL0" kind="show" identifier="showAboutUs" id="gad-AO-JfC"/>
+                        <segue destination="ckq-Ye-NuL" kind="show" identifier="showVideos" id="5wb-X0-MRm"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showHome" id="pWD-RK-2DI"/>
+                        <segue destination="Qio-xZ-CVz" kind="show" identifier="showCatalog" id="R9u-tb-k8H"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ue-kj-SuO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="755" y="705"/>
+        </scene>
+        <!--Catalog View Controller-->
+        <scene sceneID="dme-at-3eR">
+            <objects>
+                <viewController id="Qio-xZ-CVz" customClass="CatalogViewController" customModule="Vankon_World" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="15U-Y8-86x"/>
+                        <viewControllerLayoutGuide type="bottom" id="iMt-oM-Fdd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hdc-6u-bAc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3h5-Su-HR4">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="4IG-GA-m9i"/>
+                                    <constraint firstAttribute="height" constant="70" id="Kgi-XM-mJS"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.87450980389999999" green="0.38823529410000002" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Catalog" id="pbD-GH-VRS"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReC-dc-uEx" customClass="DesignableButton" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="167" y="119.5" width="266" height="361"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ReC-dc-uEx" secondAttribute="height" multiplier="14:19" id="6tk-S3-ePC"/>
+                                    <constraint firstAttribute="width" constant="266" id="VT0-re-hWr">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="450"/>
+                                    </constraint>
+                                </constraints>
+                                <state key="normal" image="catalogcover">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6tk-S3-ePC"/>
+                                        <exclude reference="VT0-re-hWr"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="6tk-S3-ePC"/>
+                                        <include reference="VT0-re-hWr"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="showCatalogBtnTapped:" destination="Qio-xZ-CVz" eventType="touchUpInside" id="9Jo-CP-CU1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vankon Catalog 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9h-81-JYi" customClass="DesignableLabel" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="182.5" y="500.5" width="235" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.87450980389999999" green="0.38823529410000002" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNI-Fs-M0d" customClass="DesignableButton" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="504" y="520" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="946-wS-Cpf"/>
+                                    <constraint firstAttribute="width" constant="60" id="LRS-QN-g96"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="cZ1-ws-9N6"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="eos-VL-NBZ"/>
+                                </constraints>
+                                <state key="normal" image="backcircularbutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeUp"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="lGw-kA-hcj" kind="unwind" unwindAction="unwindToViewController:" id="34t-zw-IyV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iMt-oM-Fdd" firstAttribute="top" secondItem="iNI-Fs-M0d" secondAttribute="bottom" constant="20" id="86a-xj-JVg"/>
+                            <constraint firstItem="R9h-81-JYi" firstAttribute="centerX" secondItem="ReC-dc-uEx" secondAttribute="centerX" id="RHO-gt-dMi"/>
+                            <constraint firstItem="3h5-Su-HR4" firstAttribute="top" secondItem="hdc-6u-bAc" secondAttribute="top" id="SCN-eY-8E4"/>
+                            <constraint firstItem="R9h-81-JYi" firstAttribute="top" secondItem="ReC-dc-uEx" secondAttribute="bottom" constant="20" id="b4A-GY-DFS"/>
+                            <constraint firstAttribute="centerY" secondItem="ReC-dc-uEx" secondAttribute="centerY" id="fab-0a-aMX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iNI-Fs-M0d" secondAttribute="trailing" constant="20" id="oGd-NC-7DM"/>
+                            <constraint firstItem="3h5-Su-HR4" firstAttribute="leading" secondItem="hdc-6u-bAc" secondAttribute="leading" id="ooZ-xI-psP"/>
+                            <constraint firstAttribute="centerX" secondItem="ReC-dc-uEx" secondAttribute="centerX" id="vNK-SD-jzc"/>
+                            <constraint firstAttribute="trailing" secondItem="3h5-Su-HR4" secondAttribute="trailing" id="wr7-Be-luc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="ebD-a6-i9z" kind="presentation" identifier="showPdf" modalTransitionStyle="flipHorizontal" id="vIr-Xi-2sl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B2G-QI-S71" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="lGw-kA-hcj" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-389" y="-857"/>
+        </scene>
+        <!--Home Page View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomePageViewController" customModule="Vankon_World" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +847,249 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jiZ-TG-kFO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="vk logo" translatesAutoresizingMaskIntoConstraints="NO" id="saU-hu-arq">
+                                <rect key="frame" x="163.5" y="70" width="275" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="saU-hu-arq" secondAttribute="height" multiplier="91:29" id="FbU-z0-UCy"/>
+                                    <constraint firstAttribute="width" constant="275" id="Gfh-kB-Ome">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="500"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BL9-9v-7Sf" customClass="DesignableButton" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="157" y="478" width="72" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="1Cd-KN-Pcc">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="72" id="4ae-4l-ghG">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="120"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" secondItem="BL9-9v-7Sf" secondAttribute="height" multiplier="1:1" id="Rpd-H6-ogc"/>
+                                </constraints>
+                                <state key="normal" image="PhoneCircularButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="callCustomerCare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FJH-AM-SBz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cay-ze-b75" customClass="DesignableButton" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="264" y="478" width="72" height="72"/>
+                                <state key="normal" image="Mail Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="mailCustomerCare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="13A-Zg-Vdn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMl-yz-7bo" customClass="DesignableButton" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="371" y="478" width="72" height="72"/>
+                                <state key="normal" image="WebButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openWebsite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q3q-Qh-XCQ"/>
+                                    <segue destination="pSI-UU-zF8" kind="presentation" identifier="showWebsite" id="tbB-F7-7HB"/>
+                                </connections>
+                            </button>
+                            <button alpha="0.29999999999999966" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeL-w1-i6a" customClass="DesignableButton" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="227.5" y="228" width="145" height="144"/>
+                                <state key="normal" image="EnterCircularButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="zoomIn"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="goToNav:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4gy-wc-pgy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="saU-hu-arq" secondAttribute="bottom" constant="393" id="6Qx-HQ-AjD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BL9-9v-7Sf" secondAttribute="bottom" constant="50" id="6aA-JK-vHr"/>
+                            <constraint firstAttribute="centerX" secondItem="IeL-w1-i6a" secondAttribute="centerX" id="83Q-bA-l2G"/>
+                            <constraint firstItem="jiZ-TG-kFO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="86k-ds-JeL"/>
+                            <constraint firstAttribute="centerY" secondItem="IeL-w1-i6a" secondAttribute="centerY" id="9GD-ZH-zlR"/>
+                            <constraint firstAttribute="trailing" secondItem="jiZ-TG-kFO" secondAttribute="trailing" id="AGK-gU-I8j"/>
+                            <constraint firstItem="BL9-9v-7Sf" firstAttribute="centerY" secondItem="cay-ze-b75" secondAttribute="centerY" id="Ggd-v9-bZE"/>
+                            <constraint firstItem="jiZ-TG-kFO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Ije-S6-8QI"/>
+                            <constraint firstAttribute="centerX" secondItem="cay-ze-b75" secondAttribute="centerX" id="Lpt-vC-FNg"/>
+                            <constraint firstItem="BL9-9v-7Sf" firstAttribute="width" secondItem="cay-ze-b75" secondAttribute="width" id="Ndi-Eh-RGb"/>
+                            <constraint firstItem="dMl-yz-7bo" firstAttribute="centerY" secondItem="cay-ze-b75" secondAttribute="centerY" id="NiF-ft-Poi"/>
+                            <constraint firstItem="jiZ-TG-kFO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QLI-Ob-b4N">
+                                <variation key="heightClass=regular-widthClass=regular" constant="-150"/>
+                            </constraint>
+                            <constraint firstItem="dMl-yz-7bo" firstAttribute="top" secondItem="jiZ-TG-kFO" secondAttribute="bottom" id="QfZ-kK-jzh"/>
+                            <constraint firstAttribute="centerX" secondItem="saU-hu-arq" secondAttribute="centerX" constant="-0.5" id="RRH-Sg-wOY"/>
+                            <constraint firstItem="saU-hu-arq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="RxF-4H-GM1"/>
+                            <constraint firstItem="dMl-yz-7bo" firstAttribute="leading" secondItem="cay-ze-b75" secondAttribute="trailing" constant="35" id="Smv-l1-2lg">
+                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="saU-hu-arq" secondAttribute="centerX" id="TC3-U1-UOB"/>
+                            <constraint firstItem="BL9-9v-7Sf" firstAttribute="height" secondItem="cay-ze-b75" secondAttribute="height" id="ZHn-Jb-Np5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="saU-hu-arq" secondAttribute="trailing" constant="50" id="Zsc-mZ-fNp"/>
+                            <constraint firstItem="saU-hu-arq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="d7Q-0K-wEI">
+                                <variation key="heightClass=compact" constant="25"/>
+                            </constraint>
+                            <constraint firstItem="cay-ze-b75" firstAttribute="leading" secondItem="BL9-9v-7Sf" secondAttribute="trailing" constant="34" id="dGE-ji-ghz"/>
+                            <constraint firstItem="jiZ-TG-kFO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="94" id="dPC-c5-AGo"/>
+                            <constraint firstItem="dMl-yz-7bo" firstAttribute="width" secondItem="cay-ze-b75" secondAttribute="width" id="dqb-Qa-tmm"/>
+                            <constraint firstAttribute="height" secondItem="jiZ-TG-kFO" secondAttribute="height" id="drP-aC-lJH"/>
+                            <constraint firstItem="saU-hu-arq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="fQI-Ih-CUd"/>
+                            <constraint firstItem="cay-ze-b75" firstAttribute="leading" secondItem="BL9-9v-7Sf" secondAttribute="trailing" constant="25" id="img-U2-Urx"/>
+                            <constraint firstItem="dMl-yz-7bo" firstAttribute="top" secondItem="jiZ-TG-kFO" secondAttribute="bottom" id="ipR-Rj-4ZJ"/>
+                            <constraint firstAttribute="trailing" secondItem="jiZ-TG-kFO" secondAttribute="trailing" id="nfI-eh-ec9"/>
+                            <constraint firstItem="jiZ-TG-kFO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="phT-3x-MIo"/>
+                            <constraint firstItem="cay-ze-b75" firstAttribute="leading" secondItem="BL9-9v-7Sf" secondAttribute="trailing" constant="35" id="rvf-5y-Vlu">
+                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                            </constraint>
+                            <constraint firstAttribute="width" secondItem="jiZ-TG-kFO" secondAttribute="width" id="v86-64-20y"/>
+                            <constraint firstItem="dMl-yz-7bo" firstAttribute="height" secondItem="cay-ze-b75" secondAttribute="height" id="wlt-x0-nEz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jiZ-TG-kFO" secondAttribute="trailing" id="x6J-kh-OaE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jiZ-TG-kFO" secondAttribute="bottom" id="yIn-fm-7OY">
+                                <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                            </constraint>
+                            <constraint firstItem="jiZ-TG-kFO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zU8-Eb-IaY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="86k-ds-JeL"/>
+                                <exclude reference="Ije-S6-8QI"/>
+                                <exclude reference="dPC-c5-AGo"/>
+                                <exclude reference="drP-aC-lJH"/>
+                                <exclude reference="nfI-eh-ec9"/>
+                                <exclude reference="v86-64-20y"/>
+                                <exclude reference="x6J-kh-OaE"/>
+                                <exclude reference="zU8-Eb-IaY"/>
+                                <exclude reference="RRH-Sg-wOY"/>
+                                <exclude reference="Zsc-mZ-fNp"/>
+                                <exclude reference="d7Q-0K-wEI"/>
+                                <exclude reference="fQI-Ih-CUd"/>
+                                <exclude reference="dGE-ji-ghz"/>
+                                <exclude reference="img-U2-Urx"/>
+                                <exclude reference="6Qx-HQ-AjD"/>
+                                <exclude reference="QfZ-kK-jzh"/>
+                                <exclude reference="ipR-Rj-4ZJ"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="backgroundWebView" destination="jiZ-TG-kFO" id="CTl-xh-lve"/>
+                        <segue destination="RYU-Of-esl" kind="presentation" identifier="showMenu" id="BzC-zm-9AP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-177" y="705"/>
+        </scene>
+        <!--Website View Controller-->
+        <scene sceneID="BWv-zy-9ql">
+            <objects>
+                <viewController id="pSI-UU-zF8" customClass="WebsiteViewController" customModule="Vankon_World" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CsU-EA-Y3W"/>
+                        <viewControllerLayoutGuide type="bottom" id="v5c-Oo-pOA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fql-em-JGC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView multipleTouchEnabled="YES" contentMode="scaleToFill" scalesPageToFit="YES" paginationMode="leftToRight" translatesAutoresizingMaskIntoConstraints="NO" id="5EI-QG-g2C">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GhS-4K-ceW" customClass="DesignableButton" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="21" y="536" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="TXh-hb-sJj">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="64"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="44" id="spo-Rg-Scc">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="64"/>
+                                    </constraint>
+                                </constraints>
+                                <state key="normal" image="crossbutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeUp"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backToHome:" destination="pSI-UU-zF8" eventType="touchUpInside" id="6ii-jF-tfc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRa-hE-9d1" customClass="DesignableButton" customModule="Vankon_World" customModuleProvider="target">
+                                <rect key="frame" x="75" y="536" width="44" height="44"/>
+                                <state key="normal" image="sharebutton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeUp"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="shareApp:" destination="pSI-UU-zF8" eventType="touchUpInside" id="KZC-tA-fWc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MRa-hE-9d1" firstAttribute="height" secondItem="GhS-4K-ceW" secondAttribute="height" id="0s5-Az-gto"/>
+                            <constraint firstItem="v5c-Oo-pOA" firstAttribute="top" secondItem="5EI-QG-g2C" secondAttribute="bottom" id="6do-tk-5vy"/>
+                            <constraint firstItem="5EI-QG-g2C" firstAttribute="leading" secondItem="Fql-em-JGC" secondAttribute="leading" id="Enx-63-bQS"/>
+                            <constraint firstItem="MRa-hE-9d1" firstAttribute="centerY" secondItem="GhS-4K-ceW" secondAttribute="centerY" id="UXJ-Fg-xU0"/>
+                            <constraint firstItem="5EI-QG-g2C" firstAttribute="top" secondItem="Fql-em-JGC" secondAttribute="top" constant="20" id="bZm-3h-lu0"/>
+                            <constraint firstItem="GhS-4K-ceW" firstAttribute="leading" secondItem="Fql-em-JGC" secondAttribute="leadingMargin" constant="5" id="dbI-9B-ofp"/>
+                            <constraint firstItem="MRa-hE-9d1" firstAttribute="leading" secondItem="GhS-4K-ceW" secondAttribute="trailing" constant="10" id="n5k-fZ-CsG"/>
+                            <constraint firstItem="MRa-hE-9d1" firstAttribute="width" secondItem="GhS-4K-ceW" secondAttribute="width" id="sGn-Rk-MNL"/>
+                            <constraint firstItem="v5c-Oo-pOA" firstAttribute="top" secondItem="GhS-4K-ceW" secondAttribute="bottom" constant="20" id="wLd-YM-raS"/>
+                            <constraint firstAttribute="trailing" secondItem="5EI-QG-g2C" secondAttribute="trailing" id="zNR-Lu-YJ7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="shareBtn" destination="MRa-hE-9d1" id="deW-o7-oO5"/>
+                        <outlet property="webView" destination="5EI-QG-g2C" id="AgQ-cG-FQw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IFE-7G-HJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-177" y="-20.25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="EnterCircularButton" width="145" height="144"/>
+        <image name="Mail Button" width="72" height="72"/>
+        <image name="PhoneCircularButton" width="72" height="72"/>
+        <image name="WebButton" width="72" height="72"/>
+        <image name="aboutusvideo" width="248" height="147"/>
+        <image name="backcircularbutton" width="83" height="83"/>
+        <image name="catalogcover" width="266" height="361"/>
+        <image name="crossbutton" width="50" height="50"/>
+        <image name="facebookroundbutton" width="144" height="144"/>
+        <image name="sharebutton" width="50" height="50"/>
+        <image name="vk logo" width="273" height="87"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tbB-F7-7HB"/>
+    </inferredMetricsTieBreakers>
 </document>

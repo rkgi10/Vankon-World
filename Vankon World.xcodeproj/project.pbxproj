@@ -7,13 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		453874651B50646D00CC7E7C /* AsyncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453874471B50646D00CC7E7C /* AsyncButton.swift */; };
+		453874661B50646D00CC7E7C /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453874481B50646D00CC7E7C /* AsyncImageView.swift */; };
+		453874671B50646D00CC7E7C /* AutoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453874491B50646D00CC7E7C /* AutoTextView.swift */; };
+		453874681B50646D00CC7E7C /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4538744A1B50646D00CC7E7C /* BlurView.swift */; };
+		453874691B50646D00CC7E7C /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4538744B1B50646D00CC7E7C /* DesignableButton.swift */; };
+		4538746A1B50646D00CC7E7C /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4538744C1B50646D00CC7E7C /* DesignableImageView.swift */; };
+		4538746B1B50646D00CC7E7C /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4538744D1B50646D00CC7E7C /* DesignableLabel.swift */; };
+		4538746C1B50646D00CC7E7C /* DesignableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4538744E1B50646D00CC7E7C /* DesignableTabBarController.swift */; };
+		4538746D1B50646D00CC7E7C /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4538744F1B50646D00CC7E7C /* DesignableTextField.swift */; };
+		4538746E1B50646D00CC7E7C /* DesignableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453874501B50646D00CC7E7C /* DesignableTextView.swift */; };
+		4538746F1B50646D00CC7E7C /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453874511B50646D00CC7E7C /* DesignableView.swift */; };
+		453874701B50646D00CC7E7C /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453874521B50646D00CC7E7C /* ImageLoader.swift */; };
+		453874711B50646D00CC7E7C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 453874531B50646D00CC7E7C /* Info.plist */; };
+		453874721B50646D00CC7E7C /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453874541B50646D00CC7E7C /* KeyboardLayoutConstraint.swift */; };
+		453874731B50646D00CC7E7C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453874551B50646D00CC7E7C /* LoadingView.swift */; };
+		453874741B50646D00CC7E7C /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453874561B50646D00CC7E7C /* LoadingView.xib */; };
+		453874751B50646D00CC7E7C /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453874571B50646D00CC7E7C /* Misc.swift */; };
+		453874761B50646D00CC7E7C /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453874581B50646D00CC7E7C /* SoundPlayer.swift */; };
+		453874771B50646D00CC7E7C /* Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4538745A1B50646D00CC7E7C /* Spring.swift */; };
+		453874781B50646D00CC7E7C /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4538745B1B50646D00CC7E7C /* SpringAnimation.swift */; };
+		453874791B50646D00CC7E7C /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4538745C1B50646D00CC7E7C /* SpringButton.swift */; };
+		4538747A1B50646D00CC7E7C /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4538745D1B50646D00CC7E7C /* SpringImageView.swift */; };
+		4538747B1B50646D00CC7E7C /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4538745E1B50646D00CC7E7C /* SpringLabel.swift */; };
+		4538747C1B50646D00CC7E7C /* SpringTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4538745F1B50646D00CC7E7C /* SpringTextField.swift */; };
+		4538747D1B50646D00CC7E7C /* SpringTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453874601B50646D00CC7E7C /* SpringTextView.swift */; };
+		4538747E1B50646D00CC7E7C /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453874611B50646D00CC7E7C /* SpringView.swift */; };
+		4538747F1B50646D00CC7E7C /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453874621B50646D00CC7E7C /* TransitionManager.swift */; };
+		453874801B50646D00CC7E7C /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453874631B50646D00CC7E7C /* TransitionZoom.swift */; };
+		453874811B50646D00CC7E7C /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453874641B50646D00CC7E7C /* UnwindSegue.swift */; };
+		454B289A1B63C35800C9EAB2 /* finalcatalog1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 454B28991B63C35800C9EAB2 /* finalcatalog1.pdf */; };
+		455016691B50FF2B00B6979E /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455016681B50FF2B00B6979E /* HomePageViewController.swift */; };
+		4550166B1B5108D600B6979E /* WebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4550166A1B5108D600B6979E /* WebsiteViewController.swift */; };
+		4550166F1B5181BD00B6979E /* NavMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4550166E1B5181BD00B6979E /* NavMenuTableViewController.swift */; };
 		457ED3BC1B4EEDB70045C25E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457ED3BB1B4EEDB70045C25E /* AppDelegate.swift */; };
 		457ED3BF1B4EEDB70045C25E /* Vankon_World.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 457ED3BD1B4EEDB70045C25E /* Vankon_World.xcdatamodeld */; };
-		457ED3C11B4EEDB70045C25E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457ED3C01B4EEDB70045C25E /* ViewController.swift */; };
 		457ED3C41B4EEDB70045C25E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 457ED3C21B4EEDB70045C25E /* Main.storyboard */; };
-		457ED3C61B4EEDB70045C25E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 457ED3C51B4EEDB70045C25E /* Images.xcassets */; };
 		457ED3C91B4EEDB70045C25E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 457ED3C71B4EEDB70045C25E /* LaunchScreen.xib */; };
 		457ED3D51B4EEDB70045C25E /* Vankon_WorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457ED3D41B4EEDB70045C25E /* Vankon_WorldTests.swift */; };
+		458526411B66A7D10053E45E /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458526401B66A7D10053E45E /* PDFViewController.swift */; };
+		4586D55F1B55570500D611CF /* CatalogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4586D55E1B55570500D611CF /* CatalogItem.swift */; };
+		45B56C521B6BB1AB006828A3 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B56C511B6BB1AB006828A3 /* SocialViewController.swift */; };
+		45B56C541B6BB1CA006828A3 /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B56C531B6BB1CA006828A3 /* OffersViewController.swift */; };
+		45B56C561B6BB5C2006828A3 /* gif3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 45B56C551B6BB5C2006828A3 /* gif3.gif */; };
+		45BEB2951B6A679C00E399C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45BEB2941B6A679C00E399C0 /* Images.xcassets */; };
+		45BEB2961B6A6A0600E399C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45BEB2941B6A679C00E399C0 /* Images.xcassets */; };
+		45DF56D01B695D4500D585DE /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DF56CF1B695D4500D585DE /* VideosViewController.swift */; };
+		45E4C4A31B52E640001F23DC /* CatalogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E4C4A21B52E640001F23DC /* CatalogTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +67,57 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		453874471B50646D00CC7E7C /* AsyncButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncButton.swift; sourceTree = "<group>"; };
+		453874481B50646D00CC7E7C /* AsyncImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		453874491B50646D00CC7E7C /* AutoTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoTextView.swift; sourceTree = "<group>"; };
+		4538744A1B50646D00CC7E7C /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		4538744B1B50646D00CC7E7C /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		4538744C1B50646D00CC7E7C /* DesignableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableImageView.swift; sourceTree = "<group>"; };
+		4538744D1B50646D00CC7E7C /* DesignableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableLabel.swift; sourceTree = "<group>"; };
+		4538744E1B50646D00CC7E7C /* DesignableTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTabBarController.swift; sourceTree = "<group>"; };
+		4538744F1B50646D00CC7E7C /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
+		453874501B50646D00CC7E7C /* DesignableTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextView.swift; sourceTree = "<group>"; };
+		453874511B50646D00CC7E7C /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		453874521B50646D00CC7E7C /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		453874531B50646D00CC7E7C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		453874541B50646D00CC7E7C /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		453874551B50646D00CC7E7C /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		453874561B50646D00CC7E7C /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		453874571B50646D00CC7E7C /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
+		453874581B50646D00CC7E7C /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		453874591B50646D00CC7E7C /* Spring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spring.h; sourceTree = "<group>"; };
+		4538745A1B50646D00CC7E7C /* Spring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spring.swift; sourceTree = "<group>"; };
+		4538745B1B50646D00CC7E7C /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
+		4538745C1B50646D00CC7E7C /* SpringButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringButton.swift; sourceTree = "<group>"; };
+		4538745D1B50646D00CC7E7C /* SpringImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringImageView.swift; sourceTree = "<group>"; };
+		4538745E1B50646D00CC7E7C /* SpringLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringLabel.swift; sourceTree = "<group>"; };
+		4538745F1B50646D00CC7E7C /* SpringTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringTextField.swift; sourceTree = "<group>"; };
+		453874601B50646D00CC7E7C /* SpringTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringTextView.swift; sourceTree = "<group>"; };
+		453874611B50646D00CC7E7C /* SpringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringView.swift; sourceTree = "<group>"; };
+		453874621B50646D00CC7E7C /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
+		453874631B50646D00CC7E7C /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
+		453874641B50646D00CC7E7C /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
+		454B28991B63C35800C9EAB2 /* finalcatalog1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = finalcatalog1.pdf; sourceTree = "<group>"; };
+		455016681B50FF2B00B6979E /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		4550166A1B5108D600B6979E /* WebsiteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebsiteViewController.swift; sourceTree = "<group>"; };
+		4550166E1B5181BD00B6979E /* NavMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavMenuTableViewController.swift; sourceTree = "<group>"; };
 		457ED3B61B4EEDB60045C25E /* Vankon World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vankon World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		457ED3BA1B4EEDB70045C25E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		457ED3BB1B4EEDB70045C25E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		457ED3BE1B4EEDB70045C25E /* Vankon_World.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Vankon_World.xcdatamodel; sourceTree = "<group>"; };
-		457ED3C01B4EEDB70045C25E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		457ED3C31B4EEDB70045C25E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		457ED3C51B4EEDB70045C25E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		457ED3C81B4EEDB70045C25E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		457ED3CE1B4EEDB70045C25E /* Vankon WorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vankon WorldTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		457ED3D31B4EEDB70045C25E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		457ED3D41B4EEDB70045C25E /* Vankon_WorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vankon_WorldTests.swift; sourceTree = "<group>"; };
+		458526401B66A7D10053E45E /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
+		4586D55E1B55570500D611CF /* CatalogItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogItem.swift; sourceTree = "<group>"; };
+		45B56C511B6BB1AB006828A3 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
+		45B56C531B6BB1CA006828A3 /* OffersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersViewController.swift; sourceTree = "<group>"; };
+		45B56C551B6BB5C2006828A3 /* gif3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif3.gif; sourceTree = "<group>"; };
+		45BEB2941B6A679C00E399C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		45DF56CF1B695D4500D585DE /* VideosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
+		45E4C4A21B52E640001F23DC /* CatalogTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +138,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		453874461B50646D00CC7E7C /* Spring */ = {
+			isa = PBXGroup;
+			children = (
+				453874471B50646D00CC7E7C /* AsyncButton.swift */,
+				453874481B50646D00CC7E7C /* AsyncImageView.swift */,
+				453874491B50646D00CC7E7C /* AutoTextView.swift */,
+				4538744A1B50646D00CC7E7C /* BlurView.swift */,
+				4538744B1B50646D00CC7E7C /* DesignableButton.swift */,
+				4538744C1B50646D00CC7E7C /* DesignableImageView.swift */,
+				4538744D1B50646D00CC7E7C /* DesignableLabel.swift */,
+				4538744E1B50646D00CC7E7C /* DesignableTabBarController.swift */,
+				4538744F1B50646D00CC7E7C /* DesignableTextField.swift */,
+				453874501B50646D00CC7E7C /* DesignableTextView.swift */,
+				453874511B50646D00CC7E7C /* DesignableView.swift */,
+				453874521B50646D00CC7E7C /* ImageLoader.swift */,
+				453874531B50646D00CC7E7C /* Info.plist */,
+				453874541B50646D00CC7E7C /* KeyboardLayoutConstraint.swift */,
+				453874551B50646D00CC7E7C /* LoadingView.swift */,
+				453874561B50646D00CC7E7C /* LoadingView.xib */,
+				453874571B50646D00CC7E7C /* Misc.swift */,
+				453874581B50646D00CC7E7C /* SoundPlayer.swift */,
+				453874591B50646D00CC7E7C /* Spring.h */,
+				4538745A1B50646D00CC7E7C /* Spring.swift */,
+				4538745B1B50646D00CC7E7C /* SpringAnimation.swift */,
+				4538745C1B50646D00CC7E7C /* SpringButton.swift */,
+				4538745D1B50646D00CC7E7C /* SpringImageView.swift */,
+				4538745E1B50646D00CC7E7C /* SpringLabel.swift */,
+				4538745F1B50646D00CC7E7C /* SpringTextField.swift */,
+				453874601B50646D00CC7E7C /* SpringTextView.swift */,
+				453874611B50646D00CC7E7C /* SpringView.swift */,
+				453874621B50646D00CC7E7C /* TransitionManager.swift */,
+				453874631B50646D00CC7E7C /* TransitionZoom.swift */,
+				453874641B50646D00CC7E7C /* UnwindSegue.swift */,
+			);
+			path = Spring;
+			sourceTree = "<group>";
+		};
 		457ED3AD1B4EEDB60045C25E = {
 			isa = PBXGroup;
 			children = (
@@ -80,12 +197,22 @@
 			isa = PBXGroup;
 			children = (
 				457ED3BB1B4EEDB70045C25E /* AppDelegate.swift */,
-				457ED3C01B4EEDB70045C25E /* ViewController.swift */,
+				45B56C551B6BB5C2006828A3 /* gif3.gif */,
+				453874461B50646D00CC7E7C /* Spring */,
 				457ED3C21B4EEDB70045C25E /* Main.storyboard */,
-				457ED3C51B4EEDB70045C25E /* Images.xcassets */,
 				457ED3C71B4EEDB70045C25E /* LaunchScreen.xib */,
 				457ED3BD1B4EEDB70045C25E /* Vankon_World.xcdatamodeld */,
+				45BEB2941B6A679C00E399C0 /* Images.xcassets */,
 				457ED3B91B4EEDB70045C25E /* Supporting Files */,
+				455016681B50FF2B00B6979E /* HomePageViewController.swift */,
+				4550166A1B5108D600B6979E /* WebsiteViewController.swift */,
+				4550166E1B5181BD00B6979E /* NavMenuTableViewController.swift */,
+				45E4C4A21B52E640001F23DC /* CatalogTableViewController.swift */,
+				4586D55E1B55570500D611CF /* CatalogItem.swift */,
+				458526401B66A7D10053E45E /* PDFViewController.swift */,
+				45DF56CF1B695D4500D585DE /* VideosViewController.swift */,
+				45B56C511B6BB1AB006828A3 /* SocialViewController.swift */,
+				45B56C531B6BB1CA006828A3 /* OffersViewController.swift */,
 			);
 			path = "Vankon World";
 			sourceTree = "<group>";
@@ -93,6 +220,7 @@
 		457ED3B91B4EEDB70045C25E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				454B28991B63C35800C9EAB2 /* finalcatalog1.pdf */,
 				457ED3BA1B4EEDB70045C25E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -159,11 +287,14 @@
 		457ED3AE1B4EEDB60045C25E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Rohit Gurnani";
 				TargetAttributes = {
 					457ED3B51B4EEDB60045C25E = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = CB3JV4B4L7;
 					};
 					457ED3CD1B4EEDB70045C25E = {
 						CreatedOnToolsVersion = 6.4;
@@ -195,9 +326,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				454B289A1B63C35800C9EAB2 /* finalcatalog1.pdf in Resources */,
+				45BEB2951B6A679C00E399C0 /* Images.xcassets in Resources */,
+				45B56C561B6BB5C2006828A3 /* gif3.gif in Resources */,
+				453874711B50646D00CC7E7C /* Info.plist in Resources */,
 				457ED3C41B4EEDB70045C25E /* Main.storyboard in Resources */,
 				457ED3C91B4EEDB70045C25E /* LaunchScreen.xib in Resources */,
-				457ED3C61B4EEDB70045C25E /* Images.xcassets in Resources */,
+				453874741B50646D00CC7E7C /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45BEB2961B6A6A0600E399C0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,9 +351,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				457ED3C11B4EEDB70045C25E /* ViewController.swift in Sources */,
+				4538746B1B50646D00CC7E7C /* DesignableLabel.swift in Sources */,
+				4538747A1B50646D00CC7E7C /* SpringImageView.swift in Sources */,
+				453874671B50646D00CC7E7C /* AutoTextView.swift in Sources */,
+				453874701B50646D00CC7E7C /* ImageLoader.swift in Sources */,
+				453874751B50646D00CC7E7C /* Misc.swift in Sources */,
+				458526411B66A7D10053E45E /* PDFViewController.swift in Sources */,
+				453874681B50646D00CC7E7C /* BlurView.swift in Sources */,
+				453874811B50646D00CC7E7C /* UnwindSegue.swift in Sources */,
+				453874731B50646D00CC7E7C /* LoadingView.swift in Sources */,
+				45B56C541B6BB1CA006828A3 /* OffersViewController.swift in Sources */,
+				455016691B50FF2B00B6979E /* HomePageViewController.swift in Sources */,
+				4538747C1B50646D00CC7E7C /* SpringTextField.swift in Sources */,
+				453874771B50646D00CC7E7C /* Spring.swift in Sources */,
+				453874761B50646D00CC7E7C /* SoundPlayer.swift in Sources */,
+				4586D55F1B55570500D611CF /* CatalogItem.swift in Sources */,
+				4538746F1B50646D00CC7E7C /* DesignableView.swift in Sources */,
+				4538746C1B50646D00CC7E7C /* DesignableTabBarController.swift in Sources */,
+				453874691B50646D00CC7E7C /* DesignableButton.swift in Sources */,
 				457ED3BC1B4EEDB70045C25E /* AppDelegate.swift in Sources */,
+				45DF56D01B695D4500D585DE /* VideosViewController.swift in Sources */,
+				453874801B50646D00CC7E7C /* TransitionZoom.swift in Sources */,
+				4538746D1B50646D00CC7E7C /* DesignableTextField.swift in Sources */,
+				4538747F1B50646D00CC7E7C /* TransitionManager.swift in Sources */,
+				4538747B1B50646D00CC7E7C /* SpringLabel.swift in Sources */,
+				453874651B50646D00CC7E7C /* AsyncButton.swift in Sources */,
+				453874661B50646D00CC7E7C /* AsyncImageView.swift in Sources */,
+				4538746E1B50646D00CC7E7C /* DesignableTextView.swift in Sources */,
+				4538747E1B50646D00CC7E7C /* SpringView.swift in Sources */,
+				4550166F1B5181BD00B6979E /* NavMenuTableViewController.swift in Sources */,
+				4538747D1B50646D00CC7E7C /* SpringTextView.swift in Sources */,
+				453874721B50646D00CC7E7C /* KeyboardLayoutConstraint.swift in Sources */,
+				453874791B50646D00CC7E7C /* SpringButton.swift in Sources */,
+				453874781B50646D00CC7E7C /* SpringAnimation.swift in Sources */,
+				4538746A1B50646D00CC7E7C /* DesignableImageView.swift in Sources */,
+				45E4C4A31B52E640001F23DC /* CatalogTableViewController.swift in Sources */,
+				4550166B1B5108D600B6979E /* WebsiteViewController.swift in Sources */,
 				457ED3BF1B4EEDB70045C25E /* Vankon_World.xcdatamodeld in Sources */,
+				45B56C521B6BB1AB006828A3 /* SocialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,7 +517,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rohit Gurnani (ZG934GXWAS)";
 				INFOPLIST_FILE = "Vankon World/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -356,7 +529,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rohit Gurnani (CB3JV4B4L7)";
 				INFOPLIST_FILE = "Vankon World/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -415,6 +590,7 @@
 				457ED3DA1B4EEDB70045C25E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		457ED3DB1B4EEDB70045C25E /* Build configuration list for PBXNativeTarget "Vankon WorldTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +599,7 @@
 				457ED3DD1B4EEDB70045C25E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
